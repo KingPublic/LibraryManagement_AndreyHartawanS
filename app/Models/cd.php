@@ -19,5 +19,9 @@ class Cd extends Model
         'release_date',
         'genre',
     ];
+    public function reservations()
+{
+    return $this->morphMany(Reservation::class, 'collection');
+}
 
 }

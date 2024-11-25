@@ -19,6 +19,10 @@ class Koran extends Model
         'publication_date',
         'description',
     ];
-
+    public function reservations()
+    {
+        return $this->morphMany(Reservation::class, 'collection');
+    }
+    
   
 }

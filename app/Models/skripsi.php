@@ -20,5 +20,10 @@ class Skripsi extends Model
         'abstract',
         'supervisor',
     ];
+    public function reservations()
+{
+    return $this->morphMany(Reservation::class, 'collection');
+}
+
 
 }

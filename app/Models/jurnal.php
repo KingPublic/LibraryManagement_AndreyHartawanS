@@ -18,4 +18,9 @@ class Jurnal extends Model
         'publication_year',
         'description',
     ];
+    public function reservations()
+{
+    return $this->morphMany(Reservation::class, 'collection');
+}
+
 }

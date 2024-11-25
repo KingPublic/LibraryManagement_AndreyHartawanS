@@ -21,7 +21,7 @@ class Buku extends Model
 
     public function reservations()
 {
-    return $this->morphMany(Reservation::class, 'inventory');
+    return $this->morphMany(Reservation::class, 'collection');
 }
 
 }
